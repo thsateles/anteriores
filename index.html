@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anato·Pruebas — Banco de preguntas de Anatomía</title>
+<meta name="description" content="Banco interactivo de preguntas de anatomía: cardiovascular, respiratorio, abdomen, tubo digestivo, hepatobiliar, renal y casos clínicos.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="app">
+
+  <header class="masthead">
+    <div class="masthead-eyebrow">Atlas de repaso</div>
+    <h1 class="title">Anato·Pruebas</h1>
+    <p class="subtitle">Banco de preguntas tomadas de exámenes previos, organizadas por sistema. Responde, recibe retroalimentación inmediata y sigue tu avance.</p>
+
+    <div class="global-progress">
+      <div class="progress-ring-wrap">
+        <svg viewBox="0 0 64 64" width="64" height="64">
+          <circle class="progress-ring-track" cx="32" cy="32" r="26"></circle>
+          <circle id="ring-fill" class="progress-ring-fill" cx="32" cy="32" r="26"></circle>
+        </svg>
+        <div class="progress-ring-label" id="ring-label">0%</div>
+      </div>
+      <div class="global-progress-text" id="global-progress-text"></div>
+      <button class="reset-btn" id="reset-btn" type="button">Borrar progreso</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="index-view" id="index-view">
+      <div class="systems-grid" id="systems-grid"></div>
+    </section>
+
+    <section class="quiz-view" id="quiz-view">
+      <div class="quiz-header">
+        <button class="back-btn" id="back-btn" type="button">&larr; Volver a los sistemas</button>
+      </div>
+      <div class="quiz-title-block">
+        <h2 class="quiz-title" id="quiz-title"></h2>
+        <span class="quiz-tally" id="quiz-tally"></span>
+      </div>
+
+      <div id="questions-container"></div>
+
+      <div class="quiz-footer-nav">
+        <button class="nav-link-btn" id="nav-prev" type="button">&larr; anterior</button>
+        <button class="nav-link-btn" id="nav-next" type="button">siguiente &rarr;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    Material de estudio personal &middot; basado en exámenes previos de Anatomía
+  </footer>
+
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
